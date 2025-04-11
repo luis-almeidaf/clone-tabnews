@@ -1,5 +1,5 @@
 function Home() {
-    return <h1>Teste 2
+    return <h1>Vai Corinthians
         
     </h1>
 }
