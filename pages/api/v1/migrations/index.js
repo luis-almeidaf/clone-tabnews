@@ -20,6 +20,7 @@ export default async function migrations(request, response) {
       return response.status(200).json(pendingMigrations);
     }
 
+<<<<<<< HEAD
     if (request.method === "POST") {
       const migratedMigrations = await migrationRunner({
         ...defaultMigrationOptions,
@@ -40,4 +41,11 @@ export default async function migrations(request, response) {
   } finally {
     await dbClient.end();
   }
+=======
+  if (request.method !== "POST" || request.method !== "GET") {
+    return response.status(405).end();
+  }
+
+  return response.status(405).end();
+>>>>>>> 4e1e38dba57c663c932e983fb4344d02ccd05d14
 }
